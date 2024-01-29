@@ -63,7 +63,7 @@ namespace Proyecto2TrimestreInterfaces {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Proyecto2TrimestreInterfaces;V1.0.0.0;component/iniciopage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Proyecto2TrimestreInterfaces;component/iniciopage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\InicioPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

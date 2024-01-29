@@ -75,23 +75,6 @@
                         </StackPanel>
                     </RadioButton>
 
-                    <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color3}"
-                                 Click="Consulta_Click">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="MagnifyingGlassPlus" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Consultas" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                    <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color5}"
-                                 Click="exitClick">
-                        <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="RightFromBracket" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Salir" Style="{StaticResource menuButtonText}"/>
-                        </StackPanel>
-                    </RadioButton>
                 </StackPanel>
 
             </Border>
