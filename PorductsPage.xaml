@@ -38,8 +38,8 @@
         <!-- Barra Edicion -->
         <StackPanel Grid.Row="1"
                 Orientation="Horizontal"
-                VerticalAlignment="Center"
-                Margin="10,0,78,0"
+                VerticalAlignment="Top"
+                Margin="0,9,88,0"
                 Height="36">
 
             <TextBlock Text="Añadir: "
@@ -93,6 +93,23 @@
                           Width="30"
                           Style="{StaticResource controlButtonIcon}"/>
             </Button>
+            <TextBlock Text="Reiniciar: "
+     Foreground="{StaticResource titleColor2}"
+    FontSize="16"
+    FontFamily="Montserrat"
+    FontWeight="Medium"
+    VerticalAlignment="Center"
+    Margin="70,0,0,0"/>
+
+            <Button x:Name="btnReinicio"
+             Style="{StaticResource controlButton}"
+                 Tag="{StaticResource color8}"
+                Click="btnReinicio_Click">
+                <fa:IconImage Icon="TrashRestore"
+                 Height="30"
+                   Width="30"
+                Style="{StaticResource controlButtonIcon}"/>
+            </Button>
 
             <TextBlock Text="Seleccionar Categoría: "
                    Foreground="{StaticResource titleColor2}"
@@ -115,6 +132,6 @@
                     Margin="0,10,0,0">
             <ListView Width="770" Height="350" Name="ListView"></ListView>
         </StackPanel>
-        <Button Content="Mostrar" Margin="788,10,0,10" Grid.Row="1" Click="Button_Click"/>
+        <Button Content="Mostrar" Margin="930,10,0,10" Grid.Row="1" Click="Button_Click" Width="50" Height="30" RenderTransformOrigin="1.656,0.548" HorizontalAlignment="Left" />
     </Grid>
 </Page>

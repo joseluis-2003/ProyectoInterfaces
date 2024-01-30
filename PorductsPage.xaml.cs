@@ -42,6 +42,11 @@ namespace Proyecto2TrimestreInterfaces
 
         }
 
+        private void btnReinicio_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void RellenarComboBox()
         {
             String[] categorias = Db.ObtenerCategorias();
