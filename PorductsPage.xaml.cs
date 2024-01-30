@@ -67,5 +67,26 @@ namespace Proyecto2TrimestreInterfaces
                 MessageBox.Show("No hay elementos para mostrar en el ComboBox.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ListView.Items.Clear();
+            String tabla = (String)comboBox.SelectedItem;
+            String[] productos = Db.ObtenerDatos(tabla);
+
+            if (productos != null && productos.Length > 0)
+            {
+                // Iterar a través del array y agregar cada elemento al ComboBox.
+                foreach (string elemento in productos)
+                {
+                    ListView.Items.Add(elemento);
+                }
+            }
+            else
+            {
+                // Opcional: Mostrar un mensaje si no hay elementos.
+                MessageBox.Show("No hay elementos para mostrar en el ComboBox.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
     }
 }

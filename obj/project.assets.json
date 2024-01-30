@@ -1821,19 +1821,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\rikia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\ProyectoInterfaces2\\Proyecto2TrimestreInterfaces.csproj",
+      "projectUniqueName": "C:\\Users\\rikia\\OneDrive\\Desktop\\ProyectoInterfaces2\\Proyecto2TrimestreInterfaces.csproj",
       "projectName": "Proyecto2TrimestreInterfaces",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\ProyectoInterfaces2\\Proyecto2TrimestreInterfaces.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\ProyectoInterfaces2\\obj\\",
+      "projectPath": "C:\\Users\\rikia\\OneDrive\\Desktop\\ProyectoInterfaces2\\Proyecto2TrimestreInterfaces.csproj",
+      "packagesPath": "C:\\Users\\rikia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rikia\\OneDrive\\Desktop\\ProyectoInterfaces2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rikia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1887,7 +1887,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
