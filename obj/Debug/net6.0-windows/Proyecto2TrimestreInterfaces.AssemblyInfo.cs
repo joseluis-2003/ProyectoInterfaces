@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Proyecto2TrimestreInterfaces")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8be91467b09de9701f9b9bc1a048d0b1ea7f641")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Proyecto2TrimestreInterfaces")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Proyecto2TrimestreInterfaces")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

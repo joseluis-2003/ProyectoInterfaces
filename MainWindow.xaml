@@ -193,7 +193,7 @@
                         </PasswordBox.Background>
                     </PasswordBox>
 
-                    <Button x:Name="login"
+                    <Button x:Name="loginButtom"
                             BorderThickness="0"
                             Content="LOGIN"
                             Foreground="White"

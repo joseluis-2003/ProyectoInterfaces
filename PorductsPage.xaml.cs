@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Proyecto2TrimestreInterfaces.DB;
 
 namespace Proyecto2TrimestreInterfaces
 {
@@ -23,6 +24,7 @@ namespace Proyecto2TrimestreInterfaces
         public PorductsPage()
         {
             InitializeComponent();
+            RellenarComboBox();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -38,6 +40,32 @@ namespace Proyecto2TrimestreInterfaces
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void RellenarComboBox()
+        {
+            String[] categorias = Db.ObtenerCategorias();
+
+            // Limpiar el ComboBox antes de agregar nuevos elementos.
+            comboBox.Items.Clear();
+
+            // Verificar si hay elementos para agregar.
+            if (categorias != null && categorias.Length > 0)
+            {
+                // Iterar a través del array y agregar cada elemento al ComboBox.
+                foreach (string elemento in categorias)
+                {
+                    comboBox.Items.Add(elemento);
+                }
+
+                // Opcional: Seleccionar el primer elemento por defecto.
+                comboBox.SelectedIndex = 0;
+            }
+            else
+            {
+                // Opcional: Mostrar un mensaje si no hay elementos.
+                MessageBox.Show("No hay elementos para mostrar en el ComboBox.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

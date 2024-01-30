@@ -103,7 +103,7 @@
                    VerticalAlignment="Center"
                    Margin="70,0,0,0"/>
 
-            <ComboBox x:Name="btnSelect"
+            <ComboBox x:Name="comboBox"
                   Tag="{StaticResource color8}"
                   Width="250"
                   Height="25"
