@@ -77,5 +77,10 @@ namespace Proyecto2TrimestreInterfaces
         {
             frame.Navigate(new InicioPage(user));
         }
+        private void Consultas_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new Consultas());
+        }
+
     }
 }

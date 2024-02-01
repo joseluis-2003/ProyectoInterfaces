@@ -75,6 +75,15 @@
                         </StackPanel>
                     </RadioButton>
 
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource color2}"
+                                 Click="Consultas_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="Question" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Consultas" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+
                 </StackPanel>
 
             </Border>

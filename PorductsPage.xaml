@@ -94,12 +94,12 @@
                           Style="{StaticResource controlButtonIcon}"/>
             </Button>
             <TextBlock Text="Reiniciar: "
-     Foreground="{StaticResource titleColor2}"
-    FontSize="16"
-    FontFamily="Montserrat"
-    FontWeight="Medium"
-    VerticalAlignment="Center"
-    Margin="70,0,0,0"/>
+                     Foreground="{StaticResource titleColor2}"
+                     FontSize="16"
+                     FontFamily="Montserrat"
+                     FontWeight="Medium"
+                     VerticalAlignment="Center"
+                     Margin="70,0,0,0"/>
 
             <Button x:Name="btnReinicio"
              Style="{StaticResource controlButton}"
@@ -121,7 +121,7 @@
 
             <ComboBox x:Name="comboBox"
                   Tag="{StaticResource color8}"
-                  Width="250"
+                  Width="290"
                   Height="25"
                   Margin="10,0,0,0">
             </ComboBox>

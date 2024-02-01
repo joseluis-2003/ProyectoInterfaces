@@ -283,3 +283,5 @@ C:\Users\josel\Desktop\ProyectoInterfaces2\obj\Debug\net6.0-windows\refint\Proye
 C:\Users\josel\Desktop\ProyectoInterfaces2\obj\Debug\net6.0-windows\Proyecto2TrimestreInterfaces.pdb
 C:\Users\josel\Desktop\ProyectoInterfaces2\obj\Debug\net6.0-windows\Proyecto2TrimestreInterfaces.genruntimeconfig.cache
 C:\Users\josel\Desktop\ProyectoInterfaces2\obj\Debug\net6.0-windows\ref\Proyecto2TrimestreInterfaces.dll
+C:\Users\josel\Desktop\ProyectoInterfaces2\obj\Debug\net6.0-windows\Consultas.g.cs
+C:\Users\josel\Desktop\ProyectoInterfaces2\obj\Debug\net6.0-windows\Consultas.baml
