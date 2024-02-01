@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto2TrimestreInterfaces.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,24 @@ namespace Proyecto2TrimestreInterfaces
         public Consultas()
         {
             InitializeComponent();
+        }
+
+
+
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnReinicio_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
