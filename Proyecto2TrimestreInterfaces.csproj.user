@@ -7,6 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Add.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ConsultaPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Delete.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Edit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="exitPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="InicioPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -18,6 +33,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Add.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ConsultaPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Delete.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Edit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="exitPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="InicioPage.xaml">
       <SubType>Designer</SubType>
     </Page>

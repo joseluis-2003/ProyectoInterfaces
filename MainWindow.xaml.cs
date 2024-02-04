@@ -1,9 +1,6 @@
-﻿using Proyecto2TrimestreInterfaces.DB;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,14 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto2TrimestreInterfaces
 {
    
-    public partial class MainWindow : System.Windows.Window
+    public partial class MainWindow : Window
     {
-
         public MainWindow()
         {
             InitializeComponent();
@@ -48,33 +43,17 @@ namespace Proyecto2TrimestreInterfaces
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
-            SecureString securePassword = txtPass.SecurePassword;
-            string password = ConvertSecureStringToString(securePassword);
+            String user = txtUser.Text;
 
-            if (Db.login(txtUser.Text, password))
+            if (txtUser.Text.Length == 0 || txtUser.Text.Trim().Equals(""))
             {
-                Debug.WriteLine("exito--------------------------------------------");
-                ventana2 v2 = new ventana2(txtUser.Text);
+                MessageBox.Show("Debe introducir un usuario correcto");
+            }
+            else if (!txtUser.Text.Equals(" ") && txtPass.Password.ToString().Equals("root"))
+            {
+                ventana2 v2 = new ventana2(user);
                 v2.Show();
                 this.Close();
-            }
-            else
-            {
-                Debug.WriteLine("liada----------------------------------------------");
-            }
-
-        }
-
-        private string ConvertSecureStringToString(SecureString secureString)
-        {
-            IntPtr ptr = System.Runtime.InteropServices.Marshal.SecureStringToBSTR(secureString);
-            try
-            {
-                return System.Runtime.InteropServices.Marshal.PtrToStringBSTR(ptr);
-            }
-            finally
-            {
-                System.Runtime.InteropServices.Marshal.ZeroFreeBSTR(ptr);
             }
         }
     }

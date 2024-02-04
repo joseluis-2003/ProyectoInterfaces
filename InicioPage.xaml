@@ -43,7 +43,7 @@
             <fa:IconImage Icon="User"
                           Height="35"
                           Width="35"
-                          Foreground="#310505"
+                          Foreground="{StaticResource titleColor3}"
                           Margin="0,0,10,0"/>
             <TextBlock x:Name="txtBienvenido"
                        Text="Bienvenido, "
@@ -66,12 +66,23 @@
                        Foreground="{StaticResource titleColor2}"
                        FontSize="30"
                        Width="750">
-                <Run Text="Bienvenido a nuestro Programa WPF de José Luis y Ricardo" FontWeight="Bold" FontSize="22"/>
+                <Run Text="Bienvenido a Nuestro Proyecto 🌟" FontWeight="Bold" FontSize="22"/>
                 <LineBreak/>
 
                 <Run Text="Descripción: " FontWeight="Bold" FontSize="18"/>
-                <Run Text="Es una aplicación diseñada para demostrar algunas características de desarrollo con WPF y .NET." FontSize="18"/>
+                <Run Text="JoséRic Apps fue creada por José Luis y Ricardo para destacar las características de desarrollo con WPF y .NET. Ofrece una interfaz intuitiva y funciones esenciales para una experiencia fácil y práctica." FontSize="18"/>
                 <LineBreak/>
+
+
+                <LineBreak/>
+                <Run Text="Saludos,El equipo de José Luis y Ricardo"
+                     FontWeight="Bold"/>
+                <LineBreak/>
+                
+                
+                
+
+                
                 
             </TextBlock>
         </StackPanel>

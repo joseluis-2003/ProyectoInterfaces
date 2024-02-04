@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Proyecto2TrimestreInterfaces.DB;
 
 namespace Proyecto2TrimestreInterfaces
 {
@@ -24,74 +23,109 @@ namespace Proyecto2TrimestreInterfaces
         public PorductsPage()
         {
             InitializeComponent();
-            RellenarComboBox();
+            agregarElementos();
+            LlenarDataGridPorDefecto();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            Delete deleteProductWindow = new Delete();
 
+            deleteProductWindow.ProductoEliminado += deleteProductWindow_ProductoEliminado;
+
+            deleteProductWindow.ShowDialog();
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
 
+            Edit editProductWindow = new Edit();
+
+            editProductWindow.ProductoEditado += EditWindow_ProductoEditado;
+
+            editProductWindow.ShowDialog();
+
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+           
+            Add addProductWindow = new Add();
 
+            // Suscríbete al evento ProductoAgregado
+            addProductWindow.ProductoAgregado += AddProductWindow_ProductoAgregado;
+
+
+            addProductWindow.ShowDialog();
+
+            // Actualizar la lista de productos después de cerrar la ventana
+            LlenarDataGridPorDefecto();
         }
 
-        private void btnReinicio_Click(object sender, RoutedEventArgs e)
+        private void AddProductWindow_ProductoAgregado(object sender, EventArgs e)
         {
-
+            // Actualizar la lista de productos después de agregar un producto
+            LlenarDataGridPorDefecto();
+        }
+        private void EditWindow_ProductoEditado(object sender, EventArgs e)
+        {
+            // Actualizar la lista de productos después de agregar un producto
+            LlenarDataGridPorDefecto();
+        }
+        private void deleteProductWindow_ProductoEliminado(object sender, EventArgs e)
+        {
+            // Actualizar la lista de productos después de agregar un producto
+            LlenarDataGridPorDefecto();
         }
 
-        private void RellenarComboBox()
+        private void agregarElementos()
         {
-            String[] categorias = Db.ObtenerCategorias();
-
-            // Limpiar el ComboBox antes de agregar nuevos elementos.
-            comboBox.Items.Clear();
-
-            // Verificar si hay elementos para agregar.
-            if (categorias != null && categorias.Length > 0)
+            List<String> categoriasBD = database.ObtenerCategorias();
+            foreach (string elemento in categoriasBD)
             {
-                // Iterar a través del array y agregar cada elemento al ComboBox.
-                foreach (string elemento in categorias)
+                btnSelect.Items.Add(elemento);
+            }
+        }
+
+        private void LlenarDataGridPorDefecto()
+        {
+            try
+            {
+                // Obtener los productos desde la base de datos
+                List<Products> productos = database.ObtenerProductos();
+
+                // Asignar la lista de productos al ItemSource del DataGrid
+                tabla.ItemsSource = productos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al llenar el DataGrid: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void btnSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                // Obtener la categoría seleccionada
+                string categoriaSeleccionada = btnSelect.SelectedItem as string;
+
+                // Verificar si la categoría no es nula
+                if (categoriaSeleccionada != null)
                 {
-                    comboBox.Items.Add(elemento);
-                }
+                    // Obtener los productos de la categoría seleccionada desde la base de datos
+                    List<Products> productosPorCategoria = database.ObtenerProductosPorCategoria(categoriaSeleccionada);
 
-                // Opcional: Seleccionar el primer elemento por defecto.
-                comboBox.SelectedIndex = 0;
+                    // Asignar la lista de productos al ItemSource del DataGrid
+                    tabla.ItemsSource = productosPorCategoria;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                // Opcional: Mostrar un mensaje si no hay elementos.
-                MessageBox.Show("No hay elementos para mostrar en el ComboBox.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Error al cargar productos por categoría: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ListView.Items.Clear();
-            String tabla = (String)comboBox.SelectedItem;
-            String[] productos = Db.ObtenerDatos(tabla);
 
-            if (productos != null && productos.Length > 0)
-            {
-                // Iterar a través del array y agregar cada elemento al ComboBox.
-                foreach (string elemento in productos)
-                {
-                    ListView.Items.Add(elemento);
-                }
-            }
-            else
-            {
-                // Opcional: Mostrar un mensaje si no hay elementos.
-                MessageBox.Show("No hay elementos para mostrar en el ComboBox.", "Advertencia", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
-        }
     }
 }
