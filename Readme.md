@@ -11,8 +11,7 @@ Asegúrate de tener instalado lo siguiente:
 1. Clona este repositorio: `git clone https://github.com/tuusuario/tu-repo.git`
 2. Ingresa al directorio del proyecto: `cd tu-repo`
 3. Instala las dependencias: `npm install`
-4. Configura la conexión a la base de datos en el archivo `config.js`.
-5. Ejecuta el servidor: `npm start`
+4. Ejecuta el servidor: `npm start`
 
 
 ### 1. Operaciones CRUD de Productos
