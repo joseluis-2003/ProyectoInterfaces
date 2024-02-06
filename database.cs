@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Proyecto2TrimestreInterfaces
 {
@@ -303,7 +304,9 @@ namespace Proyecto2TrimestreInterfaces
             try
             {
                 using (MySqlConnection conexion = new MySqlConnection(connectionString))
+
                 {
+
                     conexion.Open();
 
                     string consulta = "INSERT INTO products (ProductName, SupplierID, CategoryID, QuantityPerUnit, " +
@@ -515,6 +518,39 @@ namespace Proyecto2TrimestreInterfaces
             {
                 Console.WriteLine("Error general al actualizar producto: " + ex.Message);
             }
+        }
+        public static Boolean login(String usuario, String contrasena)
+        {
+
+            Boolean existe = false;
+
+            try
+            {
+                using (MySqlConnection conexion = new MySqlConnection(connectionString))
+                {
+
+
+                    conexion.Open();
+                    string consultaUser = "SELECT * FROM users WHERE User = '" + usuario + "' and Password = '" + contrasena +
+                                          "'";
+
+                    MySqlCommand cmd = new MySqlCommand(consultaUser, conexion);
+                    // Ejecuto la consulta SQL anterior
+                    MySqlDataReader lector = cmd.ExecuteReader();
+
+                    if (lector.Read())
+                    {
+                        existe = true;
+                    }
+                    lector.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+
+            return existe;
         }
 
 

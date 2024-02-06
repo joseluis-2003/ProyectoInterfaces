@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\rikia\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\rikia\\.nuget\\packages"
+      "C:\\Users\\josel\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\josel\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

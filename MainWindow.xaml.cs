@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -43,18 +45,35 @@ namespace Proyecto2TrimestreInterfaces
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
-            String user = txtUser.Text;
-
-            if (txtUser.Text.Length == 0 || txtUser.Text.Trim().Equals(""))
+            SecureString securePassword = txtPass.SecurePassword;
+            string password = ConvertSecureStringToString(securePassword);
+            if (database.login(txtUser.Text, password))
             {
-                MessageBox.Show("Debe introducir un usuario correcto");
-            }
-            else if (!txtUser.Text.Equals(" ") && txtPass.Password.ToString().Equals("root"))
-            {
-                ventana2 v2 = new ventana2(user);
+                Debug.WriteLine("exito--------------------------------------------");
+                ventana2 v2 = new ventana2(txtUser.Text);
                 v2.Show();
                 this.Close();
+
+            }
+            else
+            {
+                Debug.WriteLine("liada----------------------------------------------");
+            }
+
+        }
+
+        private string ConvertSecureStringToString(SecureString secureString)
+        {
+            IntPtr ptr = System.Runtime.InteropServices.Marshal.SecureStringToBSTR(secureString);
+            try
+            {
+                return System.Runtime.InteropServices.Marshal.PtrToStringBSTR(ptr);
+            }
+            finally
+            {
+                System.Runtime.InteropServices.Marshal.ZeroFreeBSTR(ptr);
             }
         }
     }
 }
+

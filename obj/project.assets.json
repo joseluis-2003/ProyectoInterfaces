@@ -1821,19 +1821,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rikia\\.nuget\\packages\\": {}
+    "C:\\Users\\josel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rikia\\OneDrive\\Desktop\\ProyectoInterfaces2\\Proyecto2TrimestreInterfaces.csproj",
+      "projectUniqueName": "C:\\Users\\josel\\Desktop\\int2\\ProyectoInterfaces\\Proyecto2TrimestreInterfaces.csproj",
       "projectName": "Proyecto2TrimestreInterfaces",
-      "projectPath": "C:\\Users\\rikia\\OneDrive\\Desktop\\ProyectoInterfaces2\\Proyecto2TrimestreInterfaces.csproj",
-      "packagesPath": "C:\\Users\\rikia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rikia\\OneDrive\\Desktop\\ProyectoInterfaces2\\obj\\",
+      "projectPath": "C:\\Users\\josel\\Desktop\\int2\\ProyectoInterfaces\\Proyecto2TrimestreInterfaces.csproj",
+      "packagesPath": "C:\\Users\\josel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\josel\\Desktop\\int2\\ProyectoInterfaces\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rikia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\josel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1879,6 +1879,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.26, 6.0.26]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.26, 6.0.26]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.26, 6.0.26]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.26, 6.0.26]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
